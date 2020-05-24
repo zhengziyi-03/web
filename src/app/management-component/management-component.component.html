@@ -1,0 +1,18 @@
+<nav class="navbar navbar-dark bg-dark flex-md-nowrap p-0 shadow h">
+    <a class="navbar-brand col-sm-2 col-md-2 mr-0">浙江机电</a>
+    <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+    <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+            <a class="nav-link" href="#">Sign out</a>
+        </li>
+    </ul>
+</nav>
+<div class="row">
+    <nav class="nav flex-column col-md-2"> >
+        <a class="nav-link active" style="font-size: 20px;" [routerLink]="['user']">学生成绩管理</a> 
+        <a class="nav-link" style="font-size: 20px;" [routerLink]="['/']" (click)="logout()">退出</a> 
+    </nav> 
+    <div class="col-md-8"> 
+        <router-outlet></router-outlet> 
+    </div> 
+</div>

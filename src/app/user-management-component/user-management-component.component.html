@@ -1,0 +1,43 @@
+<div>
+    <label for="stuID">学号</label>
+    <input type="text" id="stuID" class="form-control">
+</div>
+<div>
+    <label for="stuName">姓名</label>
+    <input type="text" id="stuName" class="form-control">
+</div>
+<div>
+    <label for="rfid">RFID</label>
+    <input type="number" id="rfid" class="form-control">
+</div>
+<div>
+    <label for="web">WEB</label>
+    <input type="number" id="web" class="form-control">
+</div>
+&nbsp;
+<div class="row">
+    <button id="add" class="btn btn-primary col">添加</button>
+    <button id="update" class="btn btn-warning col">修改</button>
+    <button id="query" class="btn btn-success col">查询</button>
+    <button id="add" class="btn btn-danger col">删除</button>
+</div>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>学号</th>
+            <th>姓名</th>
+            <th>RFID</th>
+            <th>WEB</th>
+        </tr>
+    </thead>
+    <tbody *ngFor='let student of students; let i = index' >
+        <tr>
+            <th>{{student.id}}</th>
+            <th>{{student.name}}</th>
+            <th>{{student.rfid}}</th>
+            <th>{{student.web}}</th>
+        </tr>    
+    </tbody>        
+</table>
